@@ -8,6 +8,13 @@ export default defineConfig(({ mode }) => {
     name: 'dev-api',
     configureServer(server: any) {
       server.middlewares.use(async (req: any, res: any, next: any) => {
+        const cleanUrl = req.url?.split('?')[0]
+        if (cleanUrl === '/privacy-policy' || cleanUrl === '/privacy-policy/') {
+          res.statusCode = 302
+          res.setHeader('Location', '/privacy-policy/index.html')
+          return res.end()
+        }
+
         if (!req.url?.startsWith('/api/')) return next()
 
         // Read body
@@ -121,7 +128,12 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
       emptyOutDir: true,
-      rollupOptions: { input: 'index.html' }
+      rollupOptions: {
+        input: {
+          main: 'index.html',
+          privacy: 'privacy-policy/index.html'
+        }
+      }
     },
     server: { port: 3000, open: true }
   }

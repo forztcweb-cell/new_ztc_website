@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Privacy Policy for Zatics Intelligence. Version 2.0, effective July 7, 2026." />
+    <meta property="og:title" content="Privacy Policy — Zatics Intelligence" />
+    <meta property="og:description" content="The Zatics Intelligence Privacy Policy, Version 2.0." />
+    <meta property="og:type" content="website" />
+    <title>Privacy Policy — Zatics Intelligence</title>
+    <script>
+      (() => {
+        const saved = localStorage.getItem('zatics-theme');
+        const system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = saved || system;
+      })();
+    </script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#policy-content">Skip to policy content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="https://zatics.tech" aria-label="Zatics Intelligence home">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="logo-img logo-light" src="/logo-light.png" alt="Zatics Intelligence" width="20" height="20" />
+            <img class="logo-img logo-dark" src="/logo-dark.png" alt="Zatics Intelligence" width="20" height="20" />
+          </span>
+          <span class="brand-name">Zatics <strong>Intelligence</strong></span>
+        </a>
+        <div class="header-actions">
+          <span class="header-label">Legal</span>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">☼</span>
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">◐</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-inner">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Zatics Intelligence <span class="eyebrow-slash">/</span> Legal</p>
+          <h1 id="page-title">Privacy Policy</h1>
+          <div class="hero-meta"><span>Version 2.0</span><span class="meta-separator">·</span><span>Effective July 7, 2026</span></div>
+          <p class="hero-summary">A clear account of how Zatics Intelligence handles information across its software, AI systems, platforms, and services.</p>
+        </div>
+      </section>
+
+      <section class="document-shell" aria-label="Privacy Policy document">
+        <div class="document-toolbar">
+          <div class="search-wrap">
+            <label class="sr-only" for="policy-search">Search this policy</label>
+            <span class="search-icon" aria-hidden="true"></span>
+            <input id="policy-search" type="search" autocomplete="off" placeholder="Search this policy" />
+            <kbd>⌘ K</kbd>
+            <button class="clear-search" id="clear-search" type="button" aria-label="Clear search" hidden>×</button>
+          </div>
+          <span class="toolbar-note" id="search-status" aria-live="polite">35 sections · 2.0</span>
+        </div>
+        <div class="search-results" id="search-results" hidden></div>
+
+        <div class="document-layout">
+          <aside class="toc" aria-label="Table of contents">
+            <div class="toc-sticky">
+              <div class="toc-heading"><span>Contents</span><span class="toc-count" id="toc-count"></span></div>
+              <nav id="toc-list"></nav>
+            </div>
+          </aside>
+
+          <article class="policy" id="policy-content">
+            <div class="policy-intro">
+              <p class="policy-kicker">Public document</p>
+              <p>This Privacy Policy explains how Zatics Intelligence (“Zatics”, “we”, “us”, or “our”) collects, receives, uses, processes, stores, shares, protects, retains, and deletes information in connection with its websites, software, platforms, portals, AI systems, automation systems, infrastructure, products, and services.</p>
+            </div>
+            <div id="policy-body"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="logo-img logo-light" src="/logo-light.png" alt="Zatics Intelligence" width="20" height="20" />
+            <img class="logo-img logo-dark" src="/logo-dark.png" alt="Zatics Intelligence" width="20" height="20" />
+          </span>
+          <span>Zatics Intelligence</span>
+        </div>
+        <div class="footer-links"><a href="https://zatics.tech/terms-and-conditions">Terms &amp; Conditions</a></div>
+        <p class="footer-note">Privacy Policy</p>
+      </div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/policy-data.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
