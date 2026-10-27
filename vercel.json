@@ -12,6 +12,62 @@
       "destination": "/privacy-policy/index.html"
     },
     {
+      "source": "/solutions",
+      "destination": "/solutions/index.html"
+    },
+    {
+      "source": "/solutions/",
+      "destination": "/solutions/index.html"
+    },
+    {
+      "source": "/solutions/industries",
+      "destination": "/solutions/industries/index.html"
+    },
+    {
+      "source": "/solutions/industries/",
+      "destination": "/solutions/industries/index.html"
+    },
+    {
+      "source": "/solutions/intelligence",
+      "destination": "/solutions/intelligence/index.html"
+    },
+    {
+      "source": "/solutions/intelligence/",
+      "destination": "/solutions/intelligence/index.html"
+    },
+    {
+      "source": "/solutions/engineering",
+      "destination": "/solutions/engineering/index.html"
+    },
+    {
+      "source": "/solutions/engineering/",
+      "destination": "/solutions/engineering/index.html"
+    },
+    {
+      "source": "/solutions/research",
+      "destination": "/solutions/research/index.html"
+    },
+    {
+      "source": "/solutions/research/",
+      "destination": "/solutions/research/index.html"
+    },
+    {
+      "source": "/solutions/publications",
+      "destination": "/solutions/publications/index.html"
+    },
+    {
+      "source": "/solutions/publications/",
+      "destination": "/solutions/publications/index.html"
+    },
+    {
+      "source": "/solutions/publications/building-intelligence-across-industries",
+      "destination": "/solutions/publications/building-intelligence-across-industries/index.html"
+    },
+    {
+      "source": "/solutions/publications/building-intelligence-across-industries/",
+      "destination": "/solutions/publications/building-intelligence-across-industries/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

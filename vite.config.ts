@@ -14,6 +14,41 @@ export default defineConfig(({ mode }) => {
           res.setHeader('Location', '/privacy-policy/index.html')
           return res.end()
         }
+        if (cleanUrl === '/solutions' || cleanUrl === '/solutions/') {
+          res.statusCode = 302
+          res.setHeader('Location', '/solutions/index.html')
+          return res.end()
+        }
+        if (cleanUrl === '/solutions/industries' || cleanUrl === '/solutions/industries/') {
+          res.statusCode = 302
+          res.setHeader('Location', '/solutions/industries/index.html')
+          return res.end()
+        }
+        if (cleanUrl === '/solutions/intelligence' || cleanUrl === '/solutions/intelligence/') {
+          res.statusCode = 302
+          res.setHeader('Location', '/solutions/intelligence/index.html')
+          return res.end()
+        }
+        if (cleanUrl === '/solutions/engineering' || cleanUrl === '/solutions/engineering/') {
+          res.statusCode = 302
+          res.setHeader('Location', '/solutions/engineering/index.html')
+          return res.end()
+        }
+        if (cleanUrl === '/solutions/research' || cleanUrl === '/solutions/research/') {
+          res.statusCode = 302
+          res.setHeader('Location', '/solutions/research/index.html')
+          return res.end()
+        }
+        if (cleanUrl === '/solutions/publications' || cleanUrl === '/solutions/publications/') {
+          res.statusCode = 302
+          res.setHeader('Location', '/solutions/publications/index.html')
+          return res.end()
+        }
+        if (cleanUrl === '/solutions/publications/building-intelligence-across-industries' || cleanUrl === '/solutions/publications/building-intelligence-across-industries/') {
+          res.statusCode = 302
+          res.setHeader('Location', '/solutions/publications/building-intelligence-across-industries/index.html')
+          return res.end()
+        }
 
         if (!req.url?.startsWith('/api/')) return next()
 
@@ -131,7 +166,14 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: {
           main: 'index.html',
-          privacy: 'privacy-policy/index.html'
+          privacy: 'privacy-policy/index.html',
+          solutions: 'solutions/index.html',
+          solutionsIndustries: 'solutions/industries/index.html',
+          solutionsIntelligence: 'solutions/intelligence/index.html',
+          solutionsEngineering: 'solutions/engineering/index.html',
+          solutionsResearch: 'solutions/research/index.html',
+          solutionsPublications: 'solutions/publications/index.html',
+          solutionsEssay: 'solutions/publications/building-intelligence-across-industries/index.html'
         }
       }
     },

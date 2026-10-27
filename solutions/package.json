@@ -1,0 +1,19 @@
+{
+  "name": "zatics-intelligence-publication",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "dev": "node scripts/build-site.mjs && node scripts/serve-site.mjs",
+    "preview": "node scripts/serve-site.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "allow": "^2.1.0",
+    "scripts": "^0.1.0"
+  }
+}
