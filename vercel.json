@@ -68,6 +68,22 @@
       "destination": "/solutions/publications/building-intelligence-across-industries/index.html"
     },
     {
+      "source": "/terms-and-conditions",
+      "destination": "/terms-and-conditions/index.html"
+    },
+    {
+      "source": "/terms-and-conditions/",
+      "destination": "/terms-and-conditions/index.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-and-conditions/index.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms-and-conditions/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

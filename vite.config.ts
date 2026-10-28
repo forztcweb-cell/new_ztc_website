@@ -14,6 +14,11 @@ export default defineConfig(({ mode }) => {
           res.setHeader('Location', '/privacy-policy/index.html')
           return res.end()
         }
+        if (cleanUrl === '/terms-and-conditions' || cleanUrl === '/terms-and-conditions/' || cleanUrl === '/terms' || cleanUrl === '/terms/') {
+          res.statusCode = 302
+          res.setHeader('Location', '/terms-and-conditions/index.html')
+          return res.end()
+        }
         if (cleanUrl === '/solutions' || cleanUrl === '/solutions/') {
           res.statusCode = 302
           res.setHeader('Location', '/solutions/index.html')
@@ -167,6 +172,7 @@ export default defineConfig(({ mode }) => {
         input: {
           main: 'index.html',
           privacy: 'privacy-policy/index.html',
+          terms: 'terms-and-conditions/index.html',
           solutions: 'solutions/index.html',
           solutionsIndustries: 'solutions/industries/index.html',
           solutionsIntelligence: 'solutions/intelligence/index.html',

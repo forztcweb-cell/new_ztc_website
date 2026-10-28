@@ -1,0 +1,11 @@
+{
+  "name": "zaticsterms",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.4.1",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node build.mjs"
+  }
+}
