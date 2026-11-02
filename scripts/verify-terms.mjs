@@ -11,6 +11,34 @@ const html = fs.readFileSync(htmlPath, 'utf8');
 
 console.log('--- Verifying dist/terms-and-conditions/index.html ---');
 
+// Hero section checks
+const heroChecks = [
+  ['pp-hero section', html.includes('class="pp-hero"')],
+  ['pp-hero-inner', html.includes('class="pp-hero-inner"')],
+  ['pp-eyebrow', html.includes('class="pp-eyebrow"')],
+  ['status-dot', html.includes('class="status-dot"')],
+  ['pp-eyebrow-slash', html.includes('class="pp-eyebrow-slash"')],
+  ['h1 page-title', html.includes('id="page-title">Terms &amp;<br/>Conditions</h1>')],
+  ['pp-meta', html.includes('class="pp-meta"')],
+  ['pp-meta-sep', html.includes('class="pp-meta-sep"')],
+  ['pp-hero-summary', html.includes('class="pp-hero-summary"')],
+  ['no hero-shell', !html.includes('class="hero-shell"')],
+  ['no hero-grid', !html.includes('class="hero-grid"')],
+  ['no hero-copy', !html.includes('class="hero-copy"')],
+  ['no hero-aside', !html.includes('class="hero-aside"')]
+];
+
+let heroPassed = true;
+for (const [name, passed] of heroChecks) {
+  if (!passed) {
+    console.error(`✗ Hero check failed: ${name}`);
+    heroPassed = false;
+  }
+}
+if (heroPassed) {
+  console.log('✓ Hero section matches Privacy Policy structure perfectly!');
+}
+
 const sectionMatches = html.match(/<section class="legal-section" data-section="(\d+)"/g) || [];
 console.log(`Total sections: ${sectionMatches.length} (expected 39)`);
 
@@ -95,4 +123,3 @@ for (const title of all39Sections) {
   }
 }
 console.log(`✓ Verified all ${verifiedCount} of 39 sections present in HTML!`);
-

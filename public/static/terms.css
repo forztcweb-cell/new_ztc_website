@@ -117,22 +117,22 @@ a {
 }
 
 /* ── Hero / header area ──────────────────────────────────────── */
-.hero-shell, .pp-hero {
+.pp-hero {
   position: relative;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
   background: radial-gradient(ellipse at 50% 120%, #2d4620 0%, transparent 60%);
-  padding-top: 18px;
+  padding-top: 94px; /* clear the fixed nav */
 }
 
-.pp-hero-inner, .hero-inner {
+.pp-hero-inner {
   width: calc(100% - 112px);
-  max-width: var(--max);
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 68px 0 56px;
+  padding: 88px 0 72px;
 }
 
-.pp-eyebrow, .eyebrow {
+.pp-eyebrow {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -140,74 +140,41 @@ a {
   letter-spacing: 1.4px;
   color: #b0b7ac;
   text-transform: uppercase;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 
-.status-dot, .eyebrow-dot {
-  display: inline-block;
+.pp-eyebrow .status-dot {
   flex-shrink: 0;
-  width: 5px;
-  height: 5px;
-  background: var(--accent);
-  border-radius: 50%;
-  box-shadow: 0 0 9px rgba(209, 248, 154, 0.45);
 }
 
 .pp-eyebrow-slash {
   color: var(--subtle);
 }
 
-.hero-shell h1, .pp-hero h1 {
-  font-size: clamp(48px, 6.5vw, 88px);
-  letter-spacing: -3.5px;
-  line-height: 0.98;
+.pp-hero h1 {
+  font-size: clamp(48px, 7vw, 96px);
+  letter-spacing: -4px;
+  line-height: 0.97;
   font-weight: 450;
   color: var(--text);
-  margin: 0 0 28px;
+  margin: 0 0 36px;
 }
 
-.hero-shell h1 .amp {
-  color: var(--accent);
-  font-family: var(--font);
-  font-weight: 300;
-}
-
-.pp-meta, .meta-row {
+.pp-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 24px;
 }
 
 .pp-meta-sep {
-  color: var(--subtle);
-}
-
-.meta-chip {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 7px;
-  padding: 6px 11px;
-  border: 1px solid #2e3d20;
-  border-radius: 5px;
-  background: #10170d;
-  color: #c4d1b8;
-  font-family: var(--mono);
-  font-size: 11px;
-}
-
-.meta-label {
   color: var(--accent);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
-.pp-hero-summary, .hero-lede {
-  max-width: 620px;
+.pp-hero-summary {
+  max-width: 560px;
   color: #9da297;
   font-size: 15px;
   line-height: 1.75;
@@ -770,6 +737,15 @@ mark {
 }
 
 @media (max-width: 860px) {
+  .pp-hero-inner {
+    padding: 64px 0 52px;
+  }
+
+  .pp-hero h1 {
+    font-size: clamp(46px, 14vw, 72px);
+    letter-spacing: -2.8px;
+  }
+
   .header-inner,
   .pp-hero-inner,
   .utility-inner,
@@ -851,7 +827,7 @@ mark {
 }
 
 @media (max-width: 560px) {
-  .hero-shell h1, .pp-hero h1 {
+  .pp-hero h1 {
     font-size: clamp(44px, 14vw, 68px);
     letter-spacing: -2.5px;
   }
